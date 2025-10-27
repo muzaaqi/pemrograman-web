@@ -431,6 +431,10 @@ section {
     padding: 4rem 1.5rem;
   }
 
+  .contribution-title {
+    display: none;
+  }
+
   .contribution-graph {
     display: none;
   }
