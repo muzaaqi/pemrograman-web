@@ -1,15 +1,15 @@
 const getValue = (id) => document.getElementById(id).value;
 
-const modal = document.getElementById("confirm-alert");
+const confirm = document.getElementById("confirm-alert");
 const sendButton = document.getElementById("send-button");
 
-const openModal = () => {
-  modal.style.display = "grid";
+const openConfirm = () => {
+  confirm.style.display = "grid";
   sendButton.style.display = "none";
 };
 
-const closeModal = () => {
-  modal.style.display = "none";
+const closeConfirm = () => {
+  confirm.style.display = "none";
   sendButton.style.display = "block";
 };
 
@@ -30,10 +30,10 @@ const sendEmail = (e) => {
     errorMessage.style.display = "none";
   }
 
-  openModal();
+  openConfirm();
 
   confirmSendButton.onclick = () => {
     window.location.href = mailtoLink;
-    closeModal();
+    closeConfirm();
   };
 };
