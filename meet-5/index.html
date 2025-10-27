@@ -318,6 +318,7 @@
             ></path>
           </svg>
         </div>
+        <h3 class="contribution-title">Contribution Graph</h3>
         <picture class="contribution-graph">
           <source
             media="(prefers-color-scheme: dark)"
@@ -374,9 +375,28 @@
           </div>
           <span class="error-message">All fields are required.</span>
           <div class="email-item">
-            <button type="submit" onclick="sendEmail(event)">
+            <button type="submit" id="send-button" onclick="sendEmail(event)">
               Send Message
             </button>
+            <div id="confirm-alert">
+              <span class="confirm-message">Are you sure?</span>
+              <div class="confirm-buttons">
+                <button
+                  type="button"
+                  class="cancel-button"
+                  onclick="closeModal()"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="confirm-button"
+                  onclick="sendEmail(event)"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
           </div>
         </form>
       </div>
@@ -384,13 +404,13 @@
     <footer id="footer">
       <p>© 2025 MUZAAQI. All rights reserved.</p>
     </footer>
-    <div id="email-modal" class="modal" onclick="closeModal()">
+    <!-- <div id="email-modal" class="modal" onclick="closeModal()">
       <div class="modal-content">
         <p id="modal-message">Are you sure you want to send this email?</p>
         <button class="cancel-button" onclick="closeModal()">Cancel</button>
         <button class="send-button" onclick="sendEmail(event)">Send</button>
       </div>
-    </div>
+    </div> -->
     <script src="./script.js"></script>
   </body>
 </html>
